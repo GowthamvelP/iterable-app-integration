@@ -1,0 +1,14 @@
+<h1>Send Iterable Events</h1>
+
+<%= form_with url: send_event_path, method: :post do %>
+  <%= hidden_field_tag :event_name, 'Button1Event' %>
+  <%= submit_tag 'Send Event' %>
+<% end %>
+
+<%= form_with url: send_email_path, method: :post do %>
+  <%= hidden_field_tag :event_name, 'Button2Email' %>
+  <%= submit_tag 'Send Email' %>
+<% end %>
+
+<%= flash[:notice] %>
+<%= flash[:alert] %>
